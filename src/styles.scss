@@ -1,0 +1,279 @@
+/* You can add global styles to this file, and also import other style files */
+.main-bg {
+    background-color: rgba(21,101,192,1);
+}
+.login-nav {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+    text-transform: capitalize;
+}
+.sub-side {
+    height: 50px;
+    background-color: rgba(246,248,249,1);
+    padding:15px;
+    text-align: center;
+    box-shadow: 0px 3px 0px rgb(0 0 0 / 16%);
+}
+.url-active {
+    background-color: #f1f1f1b8;
+    
+}
+.card-downl  .btn-primary {
+  display: none !important;
+}
+
+.sub-side {
+    font-weight: bold;
+}
+.main-input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(112,112,112,1);
+    height: 35px;
+    padding: 0 16px;
+    font-size: 13px;
+}
+.main-input::placeholder {
+  text-transform: lowercase;
+}
+label {
+    color: rgba(0,0,0,1);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+/* Radio BTN */ 
+
+/* Hide the browser's default radio button */
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  .container-radio  {
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-radio:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container-radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-radio .checkmark:after {
+       top: 5px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2196F3;
+  }
+
+  .upload-btn {
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1565c0;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    right: 0;
+  }
+  .sidebar {
+    width: 200px;
+    
+}
+.main-content {
+    width: calc(100% - 200px);
+    height: 100%;
+    min-width: 300px;
+    margin-right: -200px;
+}
+.sidebar , .main-content {
+  transition: .2s all ease-in-out;
+}
+.f-12 {
+  font-size: 12px;
+}
+.f-10 {
+  font-size: 10px;
+}
+.f-11 {
+  font-size: 11px;
+}
+.Icon_metro-menu {
+  cursor: pointer;
+}
+.min-200 {
+  margin-left: -200px !important;
+}
+.main-content-100 {
+  width: 100% !important;
+}
+.right-nn {
+  right: -39px !important;
+}
+.con-cc {
+    width: 55px;
+    border-radius: 0;
+    font-size: 11px;
+    border-radius: 10px 0 0 10px;
+    border-right: 0;
+}
+.con-cr {
+  border-radius: 0 10px 10px 0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.dash-sm-bar  svg{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.ngx-pagination {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.svg-mm  svg {
+	width: 100% !important;
+	height: 100% !important;
+}
+@media (min-width: 576px)
+{
+  .modal-dialog {
+    max-width: 599px;
+    margin: 1.75rem auto;
+  } 
+}
+
+#QR_BARCODE2 svg{
+  width: 154px !important;
+  height: 152px !important;
+  background-color: #fff;
+}
+
+#QR_BARCODE21 svg, #QR_BARCODE22 svg{
+  width: 180px !important;
+  height: 180px !important;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+
+.main-login-bg {
+  background-color: #F0F0F0;
+  min-height: calc(100vh - 71px);
+}
+.login-page {
+  max-width: 450px;
+  width: 100%;
+  padding: 20px 0 0;
+  margin-bottom: 40px;
+}
+.wel-log {
+  color: #257bdd;
+}
+.sign-in {
+  color: rgb(109, 109, 109);
+  font-size: 12px;
+}
+.po-i i {
+  font-size: 25px;
+  color: #8a8a8a;
+}
+.po-i{
+  max-width: 350px;
+  margin: auto;
+}
+.po-i  span{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.po-i select , .po-i input{
+  border-radius: 0;
+  border: 2px solid #d2d2d2;
+  padding:9px  9px 9px  55px  !important;
+  color: #3a3a3a;
+}
+.left-pos {
+  left: 11px;
+  border-right: 1px solid #777777;
+  display: inline-block;
+  padding-right: 9px;
+}
+.right-pos {
+  right: 11px;
+}
+.main-login-btn {
+  width: 100%;
+  height: 52px;
+  background-color: #1565c0;
+  color: #fff;
+  border: 1px solid #1565c0;
+  transition: .2s all ease-in-out;
+}
+.main-login-btn:hover {
+  background-color: #287bda;
+}
+.share-btn-gr {
+  background-color: #20B141 !important;
+}
+.share-btn {
+  max-width: 200px !important;
+}

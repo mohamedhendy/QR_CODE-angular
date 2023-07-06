@@ -1,0 +1,46 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    <form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-1">
+            <label class="container-radio me-5">Dynamic
+                <input class="me-2" type="radio"  (click)="dynamicUrl()" name="url-type" (change)="changeForm()" value="Dynamic" checked="checked" >
+                <span class="checkmark"></span>
+             </label>
+            <label class="container-radio">Static
+                <input class="me-2 ms-5" type="radio"  (click)="staticUrl()" name="url-type" id="static" (change)="changeForm()" >
+                <span class="checkmark"></span>
+             </label>
+        </div>
+        <div class="form-group mb-3">
+            <input    #URL  name="url" class="px-3 d-block main-input " id="url" type="site" formControlName="url" placeholder="Paste Link">
+                <h6 *ngIf="urlForm.get('url')?.invalid && (urlForm.get('url')?.dirty || urlForm.get('url')?.touched)"
+                    class="text-danger">
+                    <small style="font-size: 12px;">you should enter a Link site ( https://www.google.com/ )</small>
+                </h6>
+                
+        </div>
+        <div *ngIf="staticCase">
+            
+        
+            <div class="form-group mb-3">
+                <label   class="d-block" for="barcodeName">Optional name for your QR Code </label>
+                <input   class="d-block main-input "    id="name" type="text" formControlName="name">
+            </div>
+        
+    
+            <div class="form-group mb-3">
+                <label   class="d-block" for="tags">Tags </label>
+                <input      class="d-block main-input "  id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+            </div>
+        
+     
+           
+            
+        </div>
+        <div class="form-group mb-3">
+            <button  class="button btn btn-primary" [disabled]="!urlForm.valid"  (click)="getUrlQRCode();showBarcode()" > Next </button>
+        </div>  
+      </form>
+</div>

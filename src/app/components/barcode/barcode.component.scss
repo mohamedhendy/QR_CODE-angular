@@ -1,0 +1,28 @@
+.Icon_open-data-transfer-downlo {
+    position: relative;
+    width: 14px;
+    height: 14px;
+}
+#Icon_open-data-transfer-downlo {
+    fill: rgba(0,0,0,1);
+}
+#QR_BARCODE svg {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    background-color: #fff;
+}
+#QR_BARCODE  {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    margin: auto;
+    background-image: url('../../../assets/images/def-barcode.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+label.btn.btn-light:hover {
+    background-color: rgb(228, 228, 228);
+}

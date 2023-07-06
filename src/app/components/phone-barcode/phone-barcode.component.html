@@ -1,0 +1,36 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    <label class="mb-3">Enter the Phone number to create a Static QR Code</label>
+    <form [formGroup]="barcodeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group ">
+            <div class="d-flex ">
+                <input   class="con-cc d-block px-2  main-input mb-3 " id="internationalCode" type="number" formControlName="internationalCode" placeholder="Code">
+                <input    class="con-cr d-block flex-grow-1   main-input mb-3 " id="phoneNumber" type="number" formControlName="phoneNumber" placeholder="Enter Mobile Number ">
+            </div>
+            <h6 *ngIf="barcodeForm.get('internationalCode')?.invalid && (barcodeForm.get('internationalCode')?.dirty || barcodeForm.get('internationalCode')?.touched)"
+                    class="text-danger">
+                    <small>you should enter your country code</small> 
+            </h6>
+            <h6 *ngIf="barcodeForm.get('phoneNumber')?.invalid && (barcodeForm.get('phoneNumber')?.dirty || barcodeForm.get('phoneNumber')?.touched)"
+                    class="text-danger">
+                    <small>you should enter your phone Number</small> 
+            </h6>
+        </div>
+        <div class="form-group my-3">
+            <label   class="d-block" for="tags">Tags </label>
+            <input   class="d-block main-input "   id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+        </div>
+    
+         <!-- <div class="form-group mb-3">
+            <label   class="d-block" for="qrPlace">Where do you want to put the QR Code? </label>
+            <select  class="d-block main-input "  id="qrPlace" formControlName="qrPlace" style="max-width: 200px;">
+                <option value=""></option>
+            </select>
+        </div> -->
+        <div class="form-group mb-3">
+            <button  class="button btn btn-primary" [disabled]="!barcodeForm.valid"  (click)="showBarcode();getUrlQRCode()" > Next </button>
+        </div>
+      </form>
+</div>

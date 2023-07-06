@@ -1,0 +1,19 @@
+.x-170 {
+    max-width: 170px
+}
+.x-222 {
+    max-width: 222px
+
+}
+@media (max-width: 1199.98px) { 
+	.x-170 {
+		max-width: 100%
+	}
+	.x-222 {
+		max-width: 100%
+	
+	}
+ }
+ .show {
+	 display: block !important;
+ }

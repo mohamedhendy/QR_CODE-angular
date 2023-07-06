@@ -1,0 +1,138 @@
+<div class="row w-100 mx-0 px-0">
+    <div class="row w-100 px-0 mx-0">
+      <div class="col-lg-12  px-0">
+          
+      <div class=" text-center px-0">
+          <div class="sub-side ">
+              Preview
+          </div>
+          <div class="invoice" >
+              <div class="bill-card  mt-5 bg-white px-3" >
+                  <div style="min-height: 500px;" class="hc-sm shadow">
+                      <div class="bg-blue text-white overflow-hidden px-2 py-2">
+                          <span><img class="float-start pt-1 d-inline-block" src="https://img.icons8.com/material-outlined/32/26e07f/checked-2.png"/></span>
+                          <span class="h5 mb-0 py-2  d-inline-block">{{ bill_sellerName }}</span>
+                      </div>
+                      <div class="row w-100 mx-0 px-0 mt-3 f-13">
+                          <div class="col-md-4">
+                              <div class="bg-blue text-white mb-1">
+                                  Invoice Number 
+                              </div>
+                              <div>
+                                  IN- {{bill_sellerBuildingNumber}}
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class=" text-white mb-1"  style="background-color: #20B141;">
+                                  Vat Number 
+                              </div>
+                              <div>
+                                  {{bill_sellerVatNumber}}
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class=" text-white mb-1"  style="background-color: #e73c3c;">
+                                  Total Excluding Vat 
+                              </div>
+                              <div>
+                                  {{bill_invoiceTotalExcludingVat}}
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="row w-100 mx-0 px-0 mt-4 f-13">
+                          <div class="col-md-4">
+                              <div class="bg-blue text-white mb-1">
+                                  Date
+                              </div>
+                              <div>
+                              {{invoice_date}}
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class=" text-white mb-1"  style="background-color: #20B141;">
+                                  Vat 15%
+                              </div>
+                              <div>
+                                  {{bill_invoiceTotalVat15}}
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class=" text-white mb-1"  style="background-color: #e73c3c;">
+                                  Total Amount Due  
+                              </div>
+                              <div>
+                                  {{bill_invoiceTotalAmountDue}}
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row w-100 mx-0 px-0 mt-4 f-13">
+                          <div class="col-md-6">
+                              <div class=" ">
+                                  <div class="bg-blue text-white ">
+                                      SELLER
+                                  </div>
+                                  <div class="border-blue pt-1 px-1 f-13  pb-3">
+                                      <div>
+                                          <span>Seller Name: </span> <span> {{bill_sellerName}}</span>
+                                      </div>
+                                      <div>
+                                          <span>Street Name: </span> <span>{{bill_sellerStreet}}</span>
+                                      </div>
+                                      <div>
+                                          <span>City: </span> <span> {{bill_sellerCity}} </span>
+                                      </div>
+                                      <div>
+                                          <span>Country: </span> <span>  {{bill_sellerCountry}} </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="">
+                                  <div class="bg-blue text-white ">
+                                      BUYER
+                                  </div>
+                                  <div class="border-blue pb-3  px-1 f-13 pt-1">
+                                      <div>
+                                          <span>Customer Name: </span> <span>  {{bill_buyerName}}</span>
+                                      </div>
+                                      <div>
+                                          <span>Ship Name: </span> <span>  {{bill_buyerShipName}} </span>
+                                      </div>
+                                      <div>
+                                          <span>Delivery Ref: </span> <span> {{bill_buyerDeliveryReference}}  </span>
+                                      </div>
+                                      <div>
+                                          <span>Country: </span> <span>  {{bill_buyerCountry}} </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-12 my-4 ">
+                              <div class="border-blue" style="border-width: 1px;"></div>
+                          </div>
+                          <div class="col-md-6 mb-2">
+                              <span id="QR_BARCODE21" [innerHTML]="message"></span>
+                          </div>
+                          <div class="col-md-6 mb-2">
+                              <span id="QR_BARCODE22" [innerHTML]="message"></span>
+                          </div>
+                          <div class="col-md-12 mt-5">
+                              <div class="mx-auto "  style="height: 10px;background-color: #1565c0;max-width: 200px;">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          
+     
+     
+     
+     
+      </div>
+      
+    </div>
+  </div> 
+  

@@ -1,0 +1,31 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    <label class="mb-3"> create a Static  QR Code form SMS</label>
+    <form [formGroup]="barcodeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <div class="d-flex ">
+                <input   class="con-cc d-block px-2  main-input mb-3 " id="internationalCode" type="number" formControlName="internationalCode" placeholder="Code">
+                <input    class="con-cr d-block flex-grow-1   main-input mb-3 " id="phoneNumber" type="number" formControlName="phoneNumber" placeholder="Enter Mobile Number ">
+                </div>  
+        </div>
+        <div class="form-group mb-3">
+            <textarea class="d-block main-input " id="message" type="site" formControlName="message" placeholder="message" style="height: 100px;"></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label   class="d-block" for="tags">Tags </label>
+            <input   class="d-block main-input "   id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+        </div>
+    
+         <!-- <div class="form-group mb-3">
+            <label   class="d-block" for="qrPlace">Where do you want to put the QR Code? </label>
+            <select  class="d-block main-input "  id="qrPlace" formControlName="qrPlace" style="max-width: 200px;">
+                <option value=""></option>
+            </select>
+        </div> -->
+        <div class="form-group mb-3">
+            <button  class="button btn btn-primary" [disabled]="!barcodeForm.valid"  (click)="showBarcode();getUrlQRCode()" > Next </button>
+        </div>
+      </form>
+</div>

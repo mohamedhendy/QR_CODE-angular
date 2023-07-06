@@ -1,0 +1,146 @@
+.color-input {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0px;
+    border: 0;
+}
+.grad {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    display: inline-block;
+    background-image: linear-gradient(45deg, #2134d959, #ff191959)
+}
+::-webkit-color-swatch {
+    border-color: transparent;
+}
+::-moz-color-swatch {
+    border-color: transparent;
+}
+
+.grad-2 {
+    background-image: linear-gradient(rgba(221, 221, 221, 0.123), #ddd)
+}
+
+.no-label {
+    background-color: #f6f8f9;
+    border: 0;
+    padding: 5px;
+}
+input[type="color"] {
+	cursor: pointer;
+}
+
+/*  ################### */ 
+
+#Icon_feather-upload {
+	position: relative;
+	width: 12.333px;
+	height: 12.333px;
+	overflow: visible;
+}
+#Path_5 {
+	fill: transparent;
+	stroke: rgba(0,0,0,1);
+	stroke-width: 1px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Path_5 {
+	overflow: visible;
+	position: absolute;
+	width: 13.333px;
+	height: 5.111px;
+	left: 0px;
+	top: 8.222px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Path_6 {
+	fill: transparent;
+	stroke: rgba(0,0,0,1);
+	stroke-width: 1px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Path_6 {
+	overflow: visible;
+	position: absolute;
+	width: 8.266px;
+	height: 4.633px;
+	left: 2.741px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Path_7 {
+	fill: transparent;
+	stroke: rgba(0,0,0,1);
+	stroke-width: 1px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Path_7 {
+	overflow: visible;
+	position: absolute;
+	width: 1px;
+	height: 9.222px;
+	left: 6.167px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+
+
+.upload-logo {
+    border: 1px solid rgb(105, 105, 105);
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 113px;
+    height: 33px;
+    border-radius: 100px;
+    padding: 5px 12px;
+    font-size: 12px;
+    margin-top: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    cursor: pointer !important;
+    transition: .2s all ease-in-out;
+}
+// .upload-logo:hover {
+//     background-color: #1565c0;
+//     color: #fff;
+//     border-color: #1565c0;
+// }
+// .upload-logo:hover  path {
+//     stroke: white !important;
+// }
+.input-logo {
+    width: 100%;
+    max-width: 113px;
+    height: 33px;
+    opacity: 0;
+    position: relative;
+    cursor: pointer !important;
+    z-index: 2;
+}
+
+.input-logo:hover {
+    cursor: pointer !important;
+}
+
+
+ button.no-label:hover {
+	 background-color: rgb(236, 236, 236);
+ }

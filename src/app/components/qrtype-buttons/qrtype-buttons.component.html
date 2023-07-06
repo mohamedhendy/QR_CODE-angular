@@ -1,0 +1,54 @@
+<div class="sub-side">
+    QR Type
+</div>
+<div class="main-sub-side">
+    <a [routerLink]="['urlBarcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/url')"  class="mb-0  url-link" >Link</a>
+    <div class="accordion " id="accordionExample" style="border: 0;">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button #socialBTN class="accordion-button btn-toggle w-100 collapsed d-inline-block text-white d-inline-flex justify-content-between align-items-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" [attr.aria-expanded]="SCase" aria-controls="collapseOne">
+                <span>SOCIAL MEDIA</span>
+            </button>
+          </h2>
+          <div id="collapseOne" [ngClass]="{'show': setActiveClass == 'SOCIAL','accordion-collapse':true, 'collapse':true}  " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="" >
+                <a [routerLink]="['instagramBarcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/url')"  class="mb-0  url-link" >Instagram</a>
+                <a [routerLink]="['whatsppBarcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/whatsapp')"  class="mb-0  url-link" >WhatsApp</a>
+                <a [routerLink]="['facebook-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/url')"  class="mb-0  url-link" >Facebook</a>
+                <a [routerLink]="['youtube-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/url')"  class="mb-0  url-link" >Youtube</a>
+                <a [routerLink]="['twitter-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/url')"  class="mb-0  url-link" >Twitter</a>
+                <a [routerLink]="['linkedin-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/url')"  class="mb-0  url-link" >LinkedIn</a>
+                <a [routerLink]="['skype-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/skype_chat')"  class="mb-0  url-link" >Skype</a>            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button #fileBTN  id="fileBTN"  class="accordion-button collapsed btn-toggle w-100 d-inline-block text-white d-inline-flex justify-content-between align-items-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" [attr.aria-expanded]="FCase" aria-controls="collapseTwo">
+                <span>FILES</span>
+            </button>
+          </h2>
+          <div id="collapseTwo" [ngClass]="{'show': setActiveClass == 'FILES','accordion-collapse':true, 'collapse':true} " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="">
+                <a [routerLink]="['pdf-barcode']" routerLinkActive="url-active" (click)="hideQrDownload()"  class="mb-0  url-link" >PDF</a>
+                <a [routerLink]="['mp3-barcode']" routerLinkActive="url-active" (click)="hideQrDownload()"  class="mb-0  url-link" >Mp3</a>            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button contactBtn class="accordion-button collapsed btn-toggle w-100 d-inline-block text-white d-inline-flex justify-content-between align-items-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" [attr.aria-expanded]="CCase" aria-controls="collapseThree">
+                <span>CONTACT</span>
+            </button>
+          </h2>
+          <div id="collapseThree" [ngClass]="{'show': setActiveClass == 'CONTACT','accordion-collapse':true, 'collapse':true} " aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="">
+                <a [routerLink]="['vcard-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/vcard')"  class="mb-0  url-link" >vCard</a>
+                <a [routerLink]="['phone-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/phone')"  class="mb-0  url-link" >Phone</a>
+                <a [routerLink]="['email-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/email')"  class="mb-0  url-link" >Email</a>
+                <a [routerLink]="['text-barcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/text')"  class="mb-0  url-link" >Text</a>
+                <a [routerLink]="['smsBarcode']" routerLinkActive="url-active" (click)="hideQrDownload();setRouteName('generate/qrcd/sms')"  class="mb-0  url-link" >SMS</a> 
+              </div>
+          </div>
+        </div>
+      </div>
+  
+</div>

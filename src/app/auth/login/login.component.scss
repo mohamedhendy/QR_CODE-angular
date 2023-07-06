@@ -1,0 +1,56 @@
+.main-login-bg {
+    background-color: #F0F0F0;
+    min-height: calc(100vh - 71px);
+}
+.login-page {
+    max-width: 450px;
+    width: 100%;
+    padding: 20px 0 0;
+    margin-bottom: 40px;
+}
+.wel-log {
+    color: #257bdd;
+}
+.sign-in {
+    color: rgb(109, 109, 109);
+    font-size: 12px;
+}
+.po-i i {
+    font-size: 25px;
+    color: #8a8a8a;
+}
+.po-i{
+    max-width: 350px;
+    margin: auto;
+ }
+.po-i  span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.po-i select , .po-i input{
+    border-radius: 0;
+    border: 2px solid #d2d2d2;
+    padding:9px  9px 9px  55px  !important;
+    color: #3a3a3a;
+}
+.left-pos {
+    left: 11px;
+    border-right: 1px solid #777777;
+    display: inline-block;
+    padding-right: 9px;
+}
+.right-pos {
+    right: 11px;
+}
+.main-login-btn {
+    width: 100%;
+    height: 52px;
+    background-color: #1565c0;
+    color: #fff;
+    border: 1px solid #1565c0;
+    transition: .2s all ease-in-out;
+}
+.main-login-btn:hover {
+    background-color: #287bda;
+}

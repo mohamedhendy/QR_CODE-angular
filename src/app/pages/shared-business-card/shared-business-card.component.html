@@ -1,0 +1,56 @@
+<div class="main-bg login-nav">
+    <div class="container-fluid">
+      <img class="py-3" src="assets/images/letsqr_logo.png" alt="" />
+    </div>
+  </div>
+  <div
+    class="
+    row
+      main-login-bg
+      w-100
+      p-2
+      d-flex
+      align-items-center
+      justify-content-center
+    "
+  >
+
+  <div class="col-xl-12 text-center px-0">
+    <div class="business-card mt-5 bg-white" >
+        <div style="min-height: 500px;" class="hc-sm">
+            <div class="bg-blue text-white px-2 py-4">
+                <h2>{{title}}</h2>
+                <span id="QR_BARCODE2" [innerHTML]="message"></span>
+               
+            </div>
+            <div class="text-center">
+                <h4 class="mb-1">{{name}}</h4>
+                <p class="mb-1">{{company}}</p>
+            </div>
+            <div class="mx-auto mb-2" style="height: 2px;background-color: #ddd;max-width: 200px;">
+
+            </div>
+            <div >
+                <h6 class="mb-1">{{address1}}</h6>
+                <h6 class="mb-1">{{address2}}</h6>
+                <h6 >{{address3}}</h6>
+            </div>
+            <div>
+                <h6  class="mb-1"  *ngIf="contact1 || contact2">E: {{contact1}} | M {{contact2}} </h6>
+                <h6 *ngIf="city || country">city: {{city}} | country: {{country}} </h6>
+            </div>
+            <div>
+                <h6 class="" *ngIf="email1 || email2">Email: {{email1}}  {{email2}}</h6>
+            </div>
+            <div>
+                <h6 class="mb-1" >{{website1}}</h6>
+                <h6>{{website2}}</h6>
+            </div>
+            <div>
+                <h6>{{customURLsubdomain}}</h6>
+            </div>
+        </div>
+        <div class="mx-auto "  style="height: 10px;background-color: #1565c0;max-width: 200px;">
+    </div>
+    
+</div>

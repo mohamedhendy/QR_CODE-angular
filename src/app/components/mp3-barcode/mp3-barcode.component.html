@@ -1,0 +1,33 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    <label class="mb-3">Enter the Link to the audio file (e.g Soundcloud Link) or upload an MP3 file here</label>
+    <form [formGroup]="barcodeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <input   class="d-block main-input "  id="name" type="text" formControlName="name" placeholder="Name ( optional )">
+        </div>
+        <div class="form-group mb-3 position-relative" style="max-width: 150px;">
+            <input   class="d-block main-input "
+             style="position: relative;height: 44px;z-index: 2;opacity: 0;cursor: pointer;" 
+             id="file" (change)="handleFileInput($event.target)" type="file" formControlName="file" placeholder="Paste Link">
+            <button class="upload-btn">Upload MP3</button>
+        </div> 
+       
+
+        <div class="form-group mb-3">
+            <label   class="d-block" for="tags">Tags </label>
+            <input   class="d-block main-input "  id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+        </div>
+    
+         <!-- <div class="form-group mb-3">
+            <label   class="d-block" for="qrPlace">Where do you want to put the QR Code? </label>
+            <select  class="d-block main-input "  id="qrPlace" formControlName="qrPlace" style="max-width: 200px;">
+                <option value=""></option>
+            </select>
+        </div> -->
+        <div class="form-group mb-3">
+            <button  class="button btn btn-primary" [disabled]="!barcodeForm.valid"  (click)="showBarcode();updateUrl();" > Next </button>
+        </div>
+      </form>
+</div>

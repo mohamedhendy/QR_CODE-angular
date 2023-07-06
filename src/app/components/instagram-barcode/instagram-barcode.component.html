@@ -1,0 +1,52 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    <label class="mb-3">Create Instagram Qr Code</label>
+    <form [formGroup]="instaForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <input   class="d-block main-input " id="url"   type="site" formControlName="url" placeholder="Instagram User name">
+                <h6 *ngIf="instaForm.get('url')?.invalid && (instaForm.get('url')?.dirty || instaForm.get('url')?.touched)"
+                        class="text-danger">
+                        <small>you should enter an instagram formate ( https://www.instagram.com/ )</small> 
+                </h6>
+        </div>
+        <!-- <div class="form-group mb-3">
+            <label class="container-radio me-5">Enable Tracking
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Enable Tracking" checked="checked" >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">Localize QR Scans with GPS
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Localize QR Scans with GPS"  >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">E-Mail Notification when QR Code is scanned
+                <input class="me-2" type="radio"  name="url-barcode-type" value="E-Mail Notification when QR Code is scanned"  >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">Password Activated?
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Password Activated?"  >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">Add Google Campaign Parameter
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Add Google Campaign Parameter"  >
+                <span class="checkmark"></span>
+             </label>
+        </div> -->
+
+        <div class="form-group mb-3">
+            <label   class="d-block"  for="tags">Tags </label>
+            <input   class="d-block main-input "   id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+        </div>
+    
+         <!-- <div class="form-group mb-3">
+            <label   class="d-block" for="qrPlace">Where do you want to put the QR Code? </label>
+            <select  class="d-block main-input "  id="qrPlace" formControlName="qrPlace" style="max-width: 200px;">
+                <option value=""></option>
+            </select>
+        </div> -->
+        <div class="form-group mb-3">
+            <button  class="button btn btn-primary" [disabled]="!instaForm.valid"  (click)="showBarcode();getUrlQRCode()" > Next </button>
+        </div>
+      </form>
+</div>

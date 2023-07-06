@@ -1,0 +1,61 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    <label class="mb-3" >Create whatsapp qr code to send a message directly to a contact, then mobile number is mandatory and must start with country code (ISD Code.) For the United Kindom for example use 44</label>
+    <form [formGroup]="instaForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <div class="d-flex ">
+            <input   class="con-cc d-block px-2  main-input  " id="internationalCode" type="number" formControlName="internationalCode" placeholder="Code">
+            <input    class="con-cr d-block flex-grow-1   main-input  " id="phoneNumber" type="number" formControlName="phoneNumber" placeholder="Enter Mobile Number ">
+            </div>
+            <h6 *ngIf="instaForm.get('internationalCode')?.invalid && (instaForm.get('internationalCode')?.dirty || instaForm.get('internationalCode')?.touched)"
+                    class="text-danger">
+                    <small>you should enter your country code</small> 
+            </h6>
+            <h6 *ngIf="instaForm.get('phoneNumber')?.invalid && (instaForm.get('phoneNumber')?.dirty || instaForm.get('phoneNumber')?.touched)"
+                    class="text-danger">
+                    <small>you should enter your phone Number</small> 
+            </h6>
+            <input     class="mt-3 d-block main-input " id="whatsappBody" type="site" formControlName="whatsappBody" placeholder="Your Message (optional)">
+        </div>
+        <!-- <div class="form-group mb-3">
+            <label class="container-radio me-5">Enable Tracking
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Enable Tracking" checked="checked" >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">Localize QR Scans with GPS
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Localize QR Scans with GPS"  >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">E-Mail Notification when QR Code is scanned
+                <input class="me-2" type="radio"  name="url-barcode-type" value="E-Mail Notification when QR Code is scanned"  >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">Password Activated?
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Password Activated?"  >
+                <span class="checkmark"></span>
+             </label> <br>
+            <label class="container-radio me-5">Add Google Campaign Parameter
+                <input class="me-2" type="radio"  name="url-barcode-type" value="Add Google Campaign Parameter"  >
+                <span class="checkmark"></span>
+             </label>
+        </div> -->
+
+        <div class="form-group mb-3">
+            <label   class="d-block" for="tags">Tags </label>
+            <input     class="d-block main-input " id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+        </div>
+    
+         <!-- <div class="form-group mb-3">
+            <label   class="d-block" for="qrPlace">Where do you want to put the QR Code? </label>
+            <select  class="d-block main-input "  id="qrPlace" formControlName="qrPlace" style="max-width: 200px;">
+                <option value=""></option>
+            </select>
+        </div> -->
+
+        <div class="form-group mb-3">
+            <button  class="button btn btn-primary" [disabled]="!instaForm.valid"  (click)="showBarcode();getUrlQRCode()" > Next </button>
+        </div>
+      </form>
+</div>

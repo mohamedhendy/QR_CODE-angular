@@ -1,0 +1,56 @@
+
+
+
+<div class="main-bg login-nav">
+  <div class="container-fluid">
+    <img class="py-3" src="assets/images/letsqr_logo.png" alt="" />
+  </div>
+</div>
+<div
+  class="
+    main-login-bg
+    w-100
+    p-2
+    d-flex
+    align-items-center
+    justify-content-center
+  "
+>
+  <div class="shadow bg-white login-page text-center">
+    <form action="" class="d-block">
+      <h3 class="wel-log">WELCOME</h3>
+      <p class="sign-in mb-5">please sign-in to LetsQR</p>
+      
+      <!-- <div class="position-relative po-i mb-4">
+        <select  id="role" class="form-control" [(ngModel)]="role" name="role" >
+          <ng-container *ngFor="let option of roleOptions">
+            <ng-container *ngIf="option">
+              <option [value]="option.value">{{option.text}}</option>
+            </ng-container>
+          </ng-container>
+        </select> -->
+        <!-- <select name="" id="role" class="form-control" [(ngModel)]="role" name="role" >
+          
+          <option   *ngFor="let option of roleOptions"  [value]="option.value" >{{option.text}}</option>
+        </select> -->
+        <!-- <span class="left-pos side-border"><i class="far fa-user"></i></span>
+        <span class="right-pos"><i class="fas fa-chevron-down"></i></span>
+      </div> -->
+      <div class="position-relative po-i mb-4">
+        <input placeholder="UserName"   [(ngModel)]="username" name="username" type="text" class="form-control" />
+        <span class="left-pos side-border"><i class="fas fa-pen"></i></span>
+      </div>
+      <div class="position-relative po-i mb-3">
+        <input placeholder="Password" type="password"[(ngModel)]="password" autocomplete="true"  name="password" class="form-control" />
+        <span class="left-pos side-border"><i class="fas fa-lock"></i></span>
+      </div>
+       <div *ngIf="haserror">
+        <div class="alert alert-danger">
+          username or password  is invalid
+        </div>
+      </div>
+      <div  class="mb-2"> if you don't have any account <a [routerLink]="['/register']">create one</a></div>
+      <button class="main-login-btn" (click)="loginUser($event)">LOGIN</button>
+    </form>
+  </div>
+</div>

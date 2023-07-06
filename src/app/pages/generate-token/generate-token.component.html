@@ -1,0 +1,23 @@
+<div class="sub-side">
+    Generate Token
+</div>
+<div class="container mt-5 ">
+    <div class="row w-100 mx-0 px-0">
+        <div class="col-md-8">
+            <div>
+                <form [formGroup]="urlForm" >
+                    <div class="mb-3">
+                      <div class="form-group mb-3 d-flex align-items-center">
+                        <input style="height: 42px;outline: 0;"   #URL  name="url" class="px-3  border-rd-0 d-block main-input "   id="url" type="site" formControlName="url" placeholder="Paste Link">
+                        <button (click)="copyLink()" type="button" class="btn share-btn border-rd-0 " type="submit">{{copy}}</button>
+
+                      </div>
+                    </div>
+                    <div class=" text-start">
+                      <button type="button" class="share-btn  btn " (click)="resetToken()" style="background-color: rgb(12, 158, 12);" >Reset</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

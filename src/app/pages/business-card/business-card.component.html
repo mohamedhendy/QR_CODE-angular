@@ -1,0 +1,146 @@
+<div class="row w-100 mx-0 px-0">
+      <div class="row w-100 px-0 mx-0">
+        <div class="col-lg-9 col-xl-8  px-0">
+            <div class="sub-side">
+                QR
+            </div>
+            <div class="container py-5">
+                <label class="mb-3" >
+                    Please fill your business Card
+                </label>
+                <form [formGroup]="barcodeForm" (ngSubmit)="onSubmit()">
+                    <div class="row w-100 mx-0 px-0">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input "    id="name" type="text" (keyup)="changeField($event)" formControlName="name" placeholder="name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input "   id="Title" type="text" (keyup)="changeField($event)" formControlName="title" placeholder="Title ">
+                        
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input "   id="company" type="text" (keyup)="changeField($event)" formControlName="company" placeholder="Company">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input class="d-block main-input "   id="address1" type="text" (keyup)="changeField($event)" formControlName="address1" placeholder="address1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input class="d-block main-input "   id="address2" type="text" (keyup)="changeField($event)" formControlName="address2" placeholder="address2">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input class="d-block main-input "   id="address3" type="text" (keyup)="changeField($event)" formControlName="address3" placeholder="address3">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input class="d-block main-input "   id="city" type="text" (keyup)="changeField($event)" formControlName="city" placeholder="city">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input "   id="country" type="text" (keyup)="changeField($event)" formControlName="country" placeholder="country">
+                            </div>
+                        </div>
+         
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input class="d-block main-input " id="contact1"   type="text" (keyup)="changeField($event)" formControlName="contact1" placeholder="ContactNumber 1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input  class="d-block main-input " id="contact2"    type="text" (keyup)="changeField($event)" formControlName="contact2" placeholder="ContactNumber 2 ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input " id="email1"    type="email" (keyup)="changeField($event)" formControlName="email1" placeholder="Email 1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input " id="email2"    type="email" (keyup)="changeField($event)" formControlName="email2" placeholder="Email 2">
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input " id="website1"   type="text" (keyup)="changeField($event)" formControlName="website1" placeholder="Website 1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input " id="website2"   type="text" (keyup)="changeField($event)" formControlName="website2" placeholder="Website 2">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <input   class="d-block main-input " id="customURLsubdomain"   type="text" (keyup)="changeField($event)" formControlName="customURLsubdomain" placeholder="CustomURLsubdomain">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group mb-3">
+                            <button  class="button btn btn-primary" [disabled]="!barcodeForm.valid"  (click)="getUrlQRCode()" > Next </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-4 text-center px-0">
+            <div class="sub-side ">
+                Business Card
+            </div>
+            <div class="business-card mt-5 bg-white" >
+                <div style="min-height: 500px;" class="hc-sm">
+                    <div class="bg-blue text-white px-2 py-4">
+                        <h2>{{title}}</h2>
+                        <span id="QR_BARCODE2" [innerHTML]="message"></span>
+                       
+                    </div>
+                    <div class="text-center">
+                        <h4 class="mb-1">{{name}}</h4>
+                        <p class="mb-1">{{company}}</p>
+                    </div>
+                    <div class="mx-auto mb-2" style="height: 2px;background-color: #ddd;max-width: 200px;">
+    
+                    </div>
+                    <div >
+                        <h6 class="mb-1">{{address1}}</h6>
+                        <h6 class="mb-1">{{address2}}</h6>
+                        <h6 >{{address3}}</h6>
+                    </div>
+                    <div>
+                        <h6  class="mb-1"  *ngIf="contact1 || contact2"><span  *ngIf="contact1 ">E: {{contact1}}</span> <span *ngIf="contact2 ">| M {{contact2}}</span> </h6>
+                        <h6 *ngIf="city || country"><span *ngIf="city">city: {{city}}</span>  <span *ngIf="country" class=""> | country: {{country}}</span> </h6>
+                    </div>
+                    <div>
+                        <h6 class="" *ngIf="email1 || email2">Email: {{email1}}  {{email2}}</h6>
+                    </div>
+                    <div>
+                        <h6 class="mb-1"  style="text-transform: lowercase;">{{website1}}</h6>
+                        <h6 style="text-transform: lowercase;">{{website2}}</h6>
+                    </div>
+                    <div>
+                        <h6>{{customURLsubdomain}}</h6>
+                    </div>
+                </div>
+                <div class="mx-auto "  style="height: 10px;background-color: #1565c0;max-width: 200px;">
+            </div>
+            
+        </div>
+        <div class="mt-3">
+            <button class="share-btn " (click)="copyLink()" >Share Live Card</button>
+        </div>
+      </div>
+  </div> 
+ 

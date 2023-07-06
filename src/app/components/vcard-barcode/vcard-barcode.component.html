@@ -1,0 +1,141 @@
+<div class="sub-side">
+    CREATE QR
+</div>
+<div class="container py-5">
+    
+    <label class="mb-3" >
+        you are about to create a static vCard QR Code which is limited to 500 chars. QR Codes with many characteristics can be hard to read in some circumstances or even unreadable for some scanners
+    </label>
+    <form [formGroup]="barcodeForm" (ngSubmit)="onSubmit()">
+        <div class="row w-100 mx-0 px-0">
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input "    id="title" type="text" formControlName="title" placeholder="salutation (e.g, Mr, Mrs, Dr, Prof)">
+                </div>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="suffix" type="text" formControlName="suffix" placeholder="Name suffix(BA, MA, phD)">
+                </div>
+            </div> -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input "   id="fName" type="text" formControlName="fName" placeholder="firstName *">
+                    <h6 *ngIf="barcodeForm.get('fName')?.invalid "
+                    class="text-danger">
+                        <small>you should enter your first name</small> 
+                    </h6>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input "   id="lName" type="text" formControlName="lName" placeholder="lastName">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input "   id="jobTitle" type="text" formControlName="jobTitle" placeholder="Job Position">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input "   id="company" type="text" formControlName="company" placeholder="Company">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input "   id="email" type="text" formControlName="email" placeholder="email">
+                </div>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="website" type="site" formControlName="website" placeholder="website">
+                </div>
+            </div> -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="cell"   type="text" formControlName="cell" placeholder="Phone(Work)">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="mobile"    type="text" formControlName="mobile" placeholder="Mobile">
+                </div>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="phoneHome" type="text" formControlName="phoneHome" placeholder="Phone(Home)">
+                </div>
+            </div> -->
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="fax" type="text" formControlName="fax" placeholder="Fax">
+                </div>
+            </div> -->
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <select  class="d-block main-input "  formControlName="address" id="business" formControlName="business">
+                        <option selected value="Business Address">Business Address</option>
+                    </select>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="postalCode" type="text" formControlName="postalCode" placeholder="postalCode">
+                </div>
+            </div> -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="address"    type="text" formControlName="address" placeholder="Street & Number">
+                </div>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="street" type="text" formControlName="street" placeholder="Street & Number">
+                </div>
+            </div> -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="city"   type="text" formControlName="city" placeholder="City">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <input   class="d-block main-input " id="state"   type="text" formControlName="state" placeholder="state">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <select  class="d-block main-input "    id="country" formControlName="country">
+                        <option selected value="country"> country</option>
+                    </select>
+                </div>
+            </div>
+            <!-- <div class="col-md-12">
+                <div class="form-group mb-3">
+                    <textarea class="d-block main-input " placeholder="note" style="min-height: 100px;" name="" id="" cols="30" rows="6"></textarea>
+                </div>
+            </div> -->
+           <div class="col-md-12">
+                <div class="form-group mb-3">
+                    <label   class="d-block" for="tags">Tags </label>
+                    <input    class="d-block main-input " id="tags" type="text" formControlName="tags" style="max-width: 150px;">
+                </div>
+           </div>
+        
+            <!-- <div class="col-md-12">
+                <div class="form-group mb-3">
+                    <label   class="d-block" for="qrPlace">Where do you want to put the QR Code? </label>
+                    <select  class="d-block main-input "  id="qrPlace" formControlName="qrPlace" style="max-width: 200px;">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div> -->
+            <div class="col-md-12">
+                <div class="form-group mb-3">
+                    <button  class="button btn btn-primary" [disabled]="!barcodeForm.valid"  (click)="showBarcode();getUrlQRCode()" > Next </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

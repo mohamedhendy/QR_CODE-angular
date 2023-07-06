@@ -1,0 +1,63 @@
+<div class="sub-side"> </div>
+<div class="container py-5 px-0">
+<div class="text-center" id="QR_BARCODE" [innerHTML]="message"></div>
+    <div [ngClass]="{'d-none':showCase, 'text-center':true, 'my-3':true}">
+        <button (click)="show()"class="btn btn-primary w-100" style="max-width: 150px;"> Download </button>
+    </div>
+
+
+ 
+    <!-- <div *ngIf="hideCode">
+        <div class="alert alert-danger">
+            This QRCode is already exists 
+        </div>
+    </div> -->
+
+ 
+
+
+    
+    <div *ngIf="hide">
+        <h6 class="border-bottom w-100 text-center mt-4 pb-2" >Download</h6>
+        <div class="d-flex doenload-barcode text-center w-100" style="max-width: 350px;margin: auto;">
+            <ul class="list-unstyled px-0  w-100 f-12" style="white-space: nowrap;" >
+                <li class="d-inline-block mx-1">
+                    <a [href]="DownloadPng" class="d-inline-flex align-items-center justify-content-between text-dark ">
+                        <svg class="Icon_open-data-transfer-downlo" viewBox="0 0 14 14">
+                            <path id="Icon_open-data-transfer-downlo" d="M 5.25 0 L 5.25 5.25 L 1.75 5.25 L 7 10.5 L 12.25 5.25 L 8.75 5.25 L 8.75 0 L 5.25 0 Z M 0 12.25 L 0 14 L 14 14 L 14 12.25 L 0 12.25 Z">
+                            </path>
+                        </svg>
+                        <span class="ms-2 f-10">PNG</span>
+                    </a>
+                </li>
+                <li class="d-inline-block mx-1">
+                    <a [href]="DownloadSvg" class="d-inline-flex align-items-center justify-content-between text-dark ">
+                        <svg class="Icon_open-data-transfer-downlo" viewBox="0 0 14 14">
+                            <path id="Icon_open-data-transfer-downlo" d="M 5.25 0 L 5.25 5.25 L 1.75 5.25 L 7 10.5 L 12.25 5.25 L 8.75 5.25 L 8.75 0 L 5.25 0 Z M 0 12.25 L 0 14 L 14 14 L 14 12.25 L 0 12.25 Z">
+                            </path>
+                        </svg>
+                        <span class="ms-2 f-10">SVG</span>
+                    </a>
+                </li>
+                <!-- <li class="d-inline-block mx-1">
+                    <a href="" class="d-inline-flex align-items-center justify-content-between text-dark ">
+                        <svg class="Icon_open-data-transfer-downlo" viewBox="0 0 14 14">
+                            <path id="Icon_open-data-transfer-downlo" d="M 5.25 0 L 5.25 5.25 L 1.75 5.25 L 7 10.5 L 12.25 5.25 L 8.75 5.25 L 8.75 0 L 5.25 0 Z M 0 12.25 L 0 14 L 14 14 L 14 12.25 L 0 12.25 Z">
+                            </path>
+                        </svg>
+                        <span class="ms-2 f-10">JPG</span>
+                    </a>
+                </li> -->
+                <li class="d-inline-block mx-1">
+                    <a [href]="DownloadPdf" class="d-inline-flex align-items-center justify-content-between text-dark ">
+                        <svg class="Icon_open-data-transfer-downlo" viewBox="0 0 14 14">
+                            <path id="Icon_open-data-transfer-downlo" d="M 5.25 0 L 5.25 5.25 L 1.75 5.25 L 7 10.5 L 12.25 5.25 L 8.75 5.25 L 8.75 0 L 5.25 0 Z M 0 12.25 L 0 14 L 14 14 L 14 12.25 L 0 12.25 Z">
+                            </path>
+                        </svg>
+                        <span class="ms-2 f-10">PDF</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

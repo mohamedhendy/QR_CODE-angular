@@ -1,0 +1,65 @@
+
+
+
+<div class="main-bg login-nav">
+    <div class="container-fluid">
+      <img class="py-3" src="assets/images/letsqr_logo.png" alt="" />
+    </div>
+  </div>
+  <div
+    class="
+      main-login-bg
+      w-100
+      p-2
+      d-flex
+      align-items-center
+      justify-content-center
+    "
+  >   
+    <div class="shadow bg-white login-page text-center my-3 p-3">
+        <div [ngClass]="{'d-none': hide}" >
+            <div class="text-success mb-3   ">
+                <i class="fas fa-check-circle fa-5x"></i>
+            </div>
+            <h4 class="wel-log mb-3">
+                please wait while your request is being verified
+            </h4>
+
+         </div>
+      <form [formGroup]="companyForm" (ngSubmit)="onSubmit()"  [ngClass]="{'d-none': !hide}">
+        <h3 class="wel-log mb-3 py-3">CREATE YOUR ACCOUNT</h3>
+        <div *ngIf="hasError">
+            <div class="alert alert-danger mb-4">
+                {{errorMessage}}
+            </div>
+        </div>
+        <div class="row w-100 mx-0 px-0">
+            <div class="col-md-12">
+                <div class="position-relative po-i mb-4">
+                    <input placeholder="company name *" formControlName="name"  name="name" type="text" class="form-control" />
+                    <span class="left-pos side-border"><i class="fas fa-user-tie"></i></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative po-i mb-4">
+                    <input placeholder="email Id *" formControlName="emailId"  name="emailId" type="text" class="form-control" />
+                    <span class="left-pos side-border"><i class="fas fa-id-card-alt"></i></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative po-i mb-4">
+                    <input placeholder="Password *" formControlName="emailPassword"  name="emailPassword" type="password" class="form-control" />
+                    <span class="left-pos side-border"><i class="fas fa-lock"></i></span>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <button class="main-login-btn btn btn-primary" [disabled]="!companyForm.valid" >REGISTER</button>
+            </div>
+          
+        </div>
+        
+        
+      </form>
+    </div>
+  </div>
+  
